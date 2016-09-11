@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BumperJumper</string>
+    <string name="title_activity_maps">The Map</string>
+    <string name="bumps">The bumps</string>
+</resources>
