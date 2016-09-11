@@ -253,9 +253,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 // Log.d(TAG, line);
                 LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
 
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+                if (trackGpsToogleButton.isChecked()) {
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+                }
                 circle.setCenter(latLng);
-                //}
 
                 double distance = getNearestBumper(location.getLatitude(), location.getLongitude(), BUMP_ENERGY_THRESHOLD);
 //                marker.setPosition(latLng);
